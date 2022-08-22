@@ -3,10 +3,10 @@ Original Author:  Karl Stenerud  (https://github.com/kstenerud)
 
 Forked from https://github.com/kstenerud/ubuntu-server-zfs
 
-Install Ubuntu server with ZFS root
------------------------------------
+Install Ubuntu server with mirrored ZFS root 
+--------------------------------------------
 
-This script will install Ubuntu Server with a ZFS root.
+This script will install Ubuntu Server with a ZFS root with mirror topology.
 
 It will be a stock Ubuntu server install, except:
 
