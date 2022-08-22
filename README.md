@@ -1,3 +1,8 @@
+Original Author:  Karl Stenerud  (https://github.com/kstenerud)
+===================================
+
+Forked from https://github.com/kstenerud/ubuntu-server-zfs
+
 Install Ubuntu server with ZFS root
 ===================================
 
@@ -5,8 +10,7 @@ This script will install Ubuntu Server with a ZFS root.
 
 It will be a stock Ubuntu server install, except:
 
-* There will be a bridge on the ethernet port so that virtual systems can participate in the LAN (look for `br0` in the script).
-* The `finish-install.sh` script will install a few extra things (such as Docker, LXD, KVM, QEMU).
+* The `finish-install.sh` script can be modified to install a few extra things (such as Docker, LXD, KVM, QEMU) - letfover from original script.
 * When the installation completes, it will create a zfs snapshot `rpool/ROOT/ubuntu_xxxxxx@fresh-install` to save the initial state of the root filesystem.
 
 See the [OpenZFS documentation](https://github.com/openzfs/openzfs-docs/blob/master/docs/Getting%20Started/Ubuntu/Ubuntu%2020.04%20Root%20on%20ZFS.rst) for more info.
@@ -22,9 +26,6 @@ To set up SSHD on the live CD so that you can do everything over SSH:
 ```
 sudo apt install --yes openssh-server vim && echo -e "ubuntu\nubuntu" | passwd ubuntu
 ```
-
-Note: The IP address will change on the first reboot due to it connecting via the bridge. Usually it's address + 1.
-
 
 License
 -------
