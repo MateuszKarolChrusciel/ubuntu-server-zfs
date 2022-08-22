@@ -4,7 +4,7 @@ Original Author:  Karl Stenerud  (https://github.com/kstenerud)
 Forked from https://github.com/kstenerud/ubuntu-server-zfs
 
 Install Ubuntu server with ZFS root
-===================================
+-----------------------------------
 
 This script will install Ubuntu Server with a ZFS root.
 
@@ -24,7 +24,7 @@ Modify the script's configuration section, then run the script from a bootstrap 
 To set up SSHD on the live CD so that you can do everything over SSH:
 
 ```
-sudo apt install --yes openssh-server vim && echo -e "ubuntu\nubuntu" | passwd ubuntu
+sudo apt install --yes openssh-server nano && echo -e "ubuntu\nubuntu" | passwd ubuntu
 ```
 
 License
