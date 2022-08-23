@@ -284,7 +284,9 @@ sleep 5
 kill \$zed_pid
 sed -Ei "s|/mnt/?|/|" /etc/zfs/zfs-list.cache/*
 # Install GRUB to additional disks
-dpkg-reconfigure --frontend noninteractive grub-efi-amd64
+if [ "$has_uefi" == true ]; then
+  dpkg-reconfigure --frontend noninteractive grub-efi-amd64
+fi
 # Add user
 adduser --disabled-password --gecos "" $CFG_USERNAME
 cp -a /etc/skel/. /home/$CFG_USERNAME
