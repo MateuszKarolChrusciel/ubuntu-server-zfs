@@ -32,7 +32,7 @@ License
 
 MIT License:
 
-Copyright 2020 Mateusz Chruściel
+Copyright 2022 Mateusz Chruściel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
